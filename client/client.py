@@ -3,7 +3,7 @@ import threading
 from threading import *
 
 HOST = '127.0.0.1'
-PORT = 2184
+PORT = 2186
 RUNNING = True
 
 class ClientConnection (threading.Thread):
@@ -36,3 +36,5 @@ class Client:
         self.clientConn.sendData(data)
     def disconnect(self):
         self.s.close()
+
+c = Client()
